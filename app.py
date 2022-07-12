@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template, redirect, url_for
+from flask import render_template, redirect, url_for, request
 from flask import session
 from os import urandom, environ
 
@@ -17,5 +17,12 @@ def index():
 
 @app.route('/login')
 def login():
-    page = render_template('test.html', environ=environ.get('FLASK_ENV'))
+    links = {'login_url': url_for('login'), 'registration_url': url_for('register')}
+    page = render_template('login.html', **links)
     return page
+
+
+@app.post('/register')
+def register():
+    request.form.get('email', None)
+    return "<h1>not implemented yet</h1>"

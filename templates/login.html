@@ -3,16 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Logowanie i rejestracja</title>
+    <!-- <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"> -->
+    <link href="/static/style.css" rel="stylesheet">
 </head>
 <body>
-<div class="half-page" id="login">
-    <form>
-
+<div class="half-page" id="sign-in">
+    <h2>Zaloguj się</h2>
+    <form name="login-form" action="{{ login_url }}" method="get">
+        <label>
+            Twój email:
+            <input name="login" type="text" required>
+        </label>
+        <label>
+            Hasło:
+            <input name="password" type="password" required>
+        </label>
+        <button type="submit">Zaloguj</button>
     </form>
 </div>
 <div class="half-page" id="register">
-    <form>
-
+    <h2>Zarejestruj się</h2>
+    <form name="registration-form" action="{{ registration_url }}" method="post">
+        <label>
+            Twój email:
+            <input name="login" type="email" required>
+        </label>
+        <label>
+            Twój numer telefonu:
+            <input name="phone" type="tel" required value="+48 ">
+        </label>
+        <label>
+            Hasło:
+            <input name="password" type="password" required>
+        </label>
+        <label>
+            Powtórz hasło:
+            <input name="repeat-password" type="password" required>
+        </label>
+        <label>
+            Kod aktywacyjny od trenera:
+            <input name="activation_code" type="password" required>
+        </label>
+        <button type="submit">Załóż konto</button>
     </form>
 </div>
 </body>

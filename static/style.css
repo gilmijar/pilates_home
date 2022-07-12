@@ -1,0 +1,32 @@
+
+html,body {
+    height:100%;
+}
+
+.half-page{
+    width: 39.6%;
+    float: left;
+    padding: 5%;
+    height: 80%;
+    text-align: center;
+}
+
+#sign-in{
+    border-right: 2px dashed #CCE;
+}
+
+#register{
+    float:right;
+}
+
+form label{
+    display: block;
+}
+
+label>*{
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
