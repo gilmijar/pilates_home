@@ -1,0 +1,51 @@
+users
+    role: teacher, student
+
+user_group:
+    user_group_id
+    user_id
+    group_id
+    created_date
+
+groups:
+    group_id
+    group_name
+    group_teacher
+    group_member_limit
+    created_date
+    last_update
+
+classes:
+    class_id
+    creation_code
+    group_id
+    class_date
+    class_time
+    class_duration (in minutes)
+    created_date
+    last_update
+
+allowed_user_group
+    allowed_user_group_id
+    user_id
+    group_id
+    allower_id
+    created_date
+    
+user_class
+    user_class_id
+    user_id
+    class_id
+    source (from group assignent or from swap)
+    swap_id
+    creation_code
+    created_date
+    last_update
+
+swaps (when users swap classes, record original classes for each user. We tacitly assume users exchange classes in the swap)
+    swap_id
+    user_one
+    class_one
+    user_two
+    class_two
+    created_date
