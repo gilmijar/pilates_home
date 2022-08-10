@@ -86,3 +86,10 @@ def register():
     print(*user_record, sep='\n')
     return repr(user_record)
 
+
+"""
+from os import urandom
+from string import ascii_lowercase, digits
+alphas = digits+ascii_lowercase
+''.join(alphas[byte % len(alphas)] for byte in urandom(5))
+"""
